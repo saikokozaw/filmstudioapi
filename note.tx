@@ -1,0 +1,32 @@
+function createCard(data){
+    const card = document.createElement('article');
+
+    const movieTitle = document.createElement('h2');
+    const movieTitleTxt = document.createTextNode(data.title);
+    movieTitle.appendChild(movieTitleTxt)
+
+    const director = document.createElement('p');
+    const directorTxt = document.createTextNode(`Director : ${data.director}`)
+    director.appendChild(directorTxt);
+
+   const year = document.createElement('p');
+   const yearTxt = document.createTextNode(`Released : ${data.release_date}`);
+   year.appendChild(yearTxt);
+
+    const description = document.createElement('p');
+    const descriptionTxt = document.createTextNode(data.description);
+    description.appendChild(descriptionTxt);
+
+    const rating = document.createElement('p');
+    const ratingTxt = document.createTextNode(`Rotton Tomatoes Rating : ${data.rt_score}`)
+    rating.appendChild(ratingTxt)
+
+    card.appendChild(movieTitle);
+    card.appendChild(director);
+    card.appendChild(year);
+    card.appendChild(description);
+    card.appendChild(rating);
+
+
+    mainElement.appendChild(card)
+}
